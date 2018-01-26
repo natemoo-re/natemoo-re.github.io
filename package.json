@@ -17,7 +17,7 @@
     "build": "NODE_ENV=production parcel build src/index.html --public-url . -d .",
     "watch": "parcel watch src/index.html",
     "predeploy": "npm run build",
-    "deploy": "git add . && git commit -m 'automatic deploy'"
+    "deploy": "node ./scripts/deploy.js"
   },
   "repository": {
     "type": "git",

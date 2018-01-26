@@ -23,11 +23,9 @@ async function push() {
 
 async function deploy() {
     await add();
-    console.log('Adding files');
     await commit();
-    console.log('Commiting...');
     await push();
-    console.log('Pushed to master');
+    console.log('Pushed files to master');
 }
 
 deploy();
