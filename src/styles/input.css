@@ -29,13 +29,19 @@
     content: none;
 }
 
+.line.to-select {
+    display: none;
+}
+.line.to-select.visible {
+    display: flex;
+}
 .line.to-select::before {
     opacity: 0;
+    color: var(--theme-green);
 }
 
 .line.selected::before {
-    color: var(--theme-yellow);
-    animation: 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) blink infinite;
+    animation: 1.2s cubic-bezier(0.455, 0.03, 0.515, 0.955) blink infinite;
 }
 
 input[type="text"] {

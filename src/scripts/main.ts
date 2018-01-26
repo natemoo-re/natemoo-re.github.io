@@ -1,5 +1,17 @@
+import { Autotype } from './autotype';
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
-    
+    new Autotype(document.querySelector('#ls'), 'ls projects').play().then(() => {
+        attachKeydown();
+        setTimeout(() => {
+            listProjects();
+        }, 200);
+    });
+});
+
+function attachKeydown() {
     document.addEventListener('keydown', (event) => {
         const { key } = event;
         switch (key) {
@@ -16,11 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return;
     });
-
-})
+}
 
 const toSelect = Array.from(document.querySelectorAll('.to-select'));
 let selected = 0;
+
+function listProjects() {
+    toSelect.forEach((el, i) => {
+        el.classList.add('visible');
+    })
+}
 
 function onArrowUp() {
     if (toSelect[selected - 1]) {

@@ -1,5 +1,6 @@
 .prompt {
     padding: 12px;
+    padding-left: 0;
     display: flex;
 }
 
@@ -9,7 +10,7 @@
 }
 
 .prompt span:first-of-type {
-    padding-left: 4px;
+    padding-left: 16px;
 }
 .prompt span:nth-last-of-type(2) {
     padding-right: 8px;
