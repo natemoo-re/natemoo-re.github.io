@@ -1,1 +1,25 @@
 @import "./theme.css";
+@import "../assets/fonts/fira_code.css";
+@import "./spinning-pyramid.css";
+@import "./prompt.css";
+@import "./input.css";
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--theme-background);
+    color: #FFF;
+    font-family: "Fira Code", monospace;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+a {
+    color: #FFF;
+    font-family: "Fira Code", monospace;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.25;
+    text-decoration: none;
+}

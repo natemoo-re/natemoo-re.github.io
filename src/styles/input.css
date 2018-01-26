@@ -1,0 +1,53 @@
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.line {
+    box-sizing: border-box;
+    width: 100%;
+    color: #FFF;
+    display: block;
+    padding: 4px 12px;
+    display: flex;
+}
+.line::before {
+    content: "❯";
+    color: var(--theme-pink);
+    display: block;
+    margin-right: 8px;
+}
+
+.line.no-arrow {
+    height: 25.26px;
+}
+.line.no-arrow::before {
+    content: none;
+}
+
+.line.to-select::before {
+    opacity: 0;
+}
+
+.line.selected::before {
+    color: var(--theme-yellow);
+    animation: 1.25s cubic-bezier(0.455, 0.03, 0.515, 0.955) blink infinite;
+}
+
+input[type="text"] {
+    box-sizing: border-box;
+    border: none;
+    background: none;
+    color: #FFF;
+    font-family: "Fira Code", monospace;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.25;
+
+    width: 100%;
+    /* padding: 4px 12px; */
+}

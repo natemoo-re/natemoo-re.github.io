@@ -1,0 +1,46 @@
+.prompt {
+    padding: 12px;
+    display: flex;
+}
+
+.prompt span {
+    background-color: var(--theme-dark-blue);
+    padding: 4px 1px;
+}
+
+.prompt span:first-of-type {
+    padding-left: 4px;
+}
+.prompt span:nth-last-of-type(2) {
+    padding-right: 8px;
+}
+
+.prompt .at {
+    color: rgba(255, 255, 255, .8);
+}
+
+.prompt .arrow {
+    background: none;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1px;
+    border: 12px solid rgba(0,0,0,0);
+    border-left-color: var(--theme-dark-blue);
+    margin-right: -4px;
+}
+
+.prompt .arrow.blue {
+    background-color: #FFF;
+    border-left-color: var(--theme-dark-blue);
+}
+.prompt .arrow.white {
+    background-color: transparent;
+    border-left-color: #FFF;
+}
+
+.prompt .location {
+    background-color: #FFF;
+    color: var(--theme-dark-blue);
+}
